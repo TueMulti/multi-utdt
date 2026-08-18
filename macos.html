@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MacOS Deltarune Modding Guide</title>
+  <meta name="description" content="A step-by-step guide on how to mod Deltarune on macOS">
+  <meta property="og:title" content="MacOS Deltarune Modding Guide">
+  <meta property="og:description" content="A step-by-step guide on how to mod Deltarune on macOS">
+  <meta property="og:image" content="Images/page.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ffff00">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="macos-page">
+  <a href="index.html" class="back-link">Go Back.</a>
+
+  <header>
+    <h1><span class="bg">MACOS MODDING</span></h1>
+    <p class="subtext"></p>
+  </header>
+
+  <section class="box">
+    <h2 style="margin-bottom: 16px;">SECTIONS:</h2>
+    <ul class="jump-list">
+      <li><a href="#beginning" class="jump-link">Beginning</a></li>
+      <li class="sub-item"><a href="#step01" class="sub-link">Requirements</a></li>
+      <li><a href="#downloading-1" class="jump-link">01. Setting up Porting Kit</a></li>
+      <li><a href="#modding1" class="jump-link">02. Some Organisation</a></li>
+      <li><a href="#modding2" class="jump-link">03. Modding DELTARUNE</a></li>
+      <li><a href="#troubleshooting" class="jump-link">04. Troubleshooting</a></li>
+    </ul>
+  </section>
+
+
+
+  <main>
+    <section class="box" id="beginning">
+      <h2>Beginning</h2>
+
+      <p><a class="b" href="https://youtu.be/anLi2_KsCmk?si=ONusQiNs2hpfPkrv" target="_blank" rel="noopener">Site is based on this video:</a></p>
+      <iframe class="guide-video" src="https://www.youtube.com/embed/anLi2_KsCmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p class="subtext">So if you feel like the tutorial on this website is a bit confusing.. 
+        then feel free to watch the video instead
+      </p>
+
+      <p>So, this took me a while to create just because I completely forgot about it. Anyways, 
+        I'll be talking a bit before getting to the tutorial.</p>
+
+      
+      <p>I have personally only tested this on an <span class="y">M4 Mac</span>. 
+        I genuinely have no idea if Intel macs work with this... </p>
+
+      <p>Also, make sure you have <a class="b" href="https://store.steampowered.com/app/1671210/DELTARUNE/" target="_blank" rel="noopener">DELTARUNE</a> on <a class="b" href="https://store.steampowered.com/about/" target="_blank" rel="noopener">Steam</a>!</p>
+
+      <div class="subtopic" id="step01">
+        <h3>Requirements</h3>
+        <p>Now, for this you will need these software:
+        </p>
+        <ul>
+          <li><span class="b">Deltarune</span> on <span class="b">Steam</span> (obviously)</li>
+          <li><a class="b" href="https://www.portingkit.com/download" target="_blank" rel="noopener">Porting Kit</a></li>
+          <li><a class="b" href="https://github.com/marco-calautti/DeltaPatcher" target="_blank" rel="noopener">DeltaPatcher</a></li>
+          <li>Optional: <span class="b">Crossover</span> (You can use this method if <span class="b">Porting Kit</span> doesn't work for any reasons!) </li>
+        </ul>
+
+      </div>
+    </section>
+
+   
+
+    <section class="box" id="downloading-1">
+      <h2>Step 01: Setting up Porting Kit</h2>
+      <p>Because almost all DELTARUNE mods are made for the Windows version, we need to get the Windows game files (<span class="b">data.win</span>) first. We'll be using <span class="b">Porting Kit</span> to install the Windows version of <span class="b">Steam</span> so we can grab those files!</p>
+
+      <p>You will have to make sure to download <a class="b" href="https://www.portingkit.com/download" target="_blank" rel="noopener">Porting Kit</a> from HERE or the link below: </p>
+      <p><a class="b" href="https://www.portingkit.com/download" target="_blank" rel="noopener">https://www.portingkit.com/download</a></p>
+
+      <p>Press <span class="b"> Download PK 7 (macOS 12.0+) </span> </p>
+      <a href="Images/Porting_Kit/PortingKit1.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit1.png" alt="Porting Kit download page, Download PK 7 button highlighted"></a>
+
+
+
+      <p>After pressing the Download button, you will get redirected to itch.io. Scroll down and
+        press the red <span class="r">"Download Now"</span> button. After, press on the underlined
+        "<span class="g">No thanks, just take me to the downloads</span>" 
+        (if you want to you can leave a nice donation for the devs!)
+      </p>
+
+
+      <p>Depending on the device you have, if you have an <span class="y">M1 & ABOVE</span>
+        select the <span class="y">"Porting.Kit-7.0.2-Apple Silicon.dmg"</span> file. If you
+        have an INTEL based Mac device, select the <span class="y">"Porting.Kit-7.0.2-Intel.dmg"</span>
+        file.
+      </p>
+      <a href="Images/Porting_Kit/PortingKit2.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit2.gif" alt="Selecting the correct Porting Kit DMG for Apple Silicon or Intel"></a>
+
+
+
+      <p>After you have DOWNLOADED the file, it should be sent to your <span class="y">Downloads</span> folder.
+        Double click the DMG file. A Window will appear showing <span class="b">Porting Kit</span> and your <span class="y">Applications</span>
+        folder. Drag <span class="b">Porting Kit</span> into your <span class="y">Applications</span> folder. Then, close out of the window.
+      </p>
+      <p>Within Finder and Locations on the left side, you might want to close the folder.
+        Just right click and press <span class="y">Eject</span> or press the eject icon.
+      </p>
+      <a href="Images/Porting_Kit/PortingKit4.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit4.png" alt="Ejecting the Porting Kit DMG from Finder"></a>
+
+      
+      <p>It should now be INSTALLED on your device. Hold <span class="y">COMMAND + SPACE</span> and
+        type <span class="b">Porting Kit</span> or press <span class="y">COMMAND + 1</span> after the first command to find it.
+      </p>
+
+      
+      <p><span class="b">Porting Kit</span> will be open on <span class="y">'News'</span> under <span class="y">'Misc'</span>. 
+        Press on <span class="y">'All Games'</span> (under <span class="y">'Games'</span>) and Press
+        the second Thumbnail (which has the Steam Icon). It's labelled <span class="y">'Steambuild 32/64bit DXVK'</span>.
+        After Pressing it, tap on <span class="y">'INSTALL'</span>.
+      </p>
+
+      <p>Note:</p>
+      <p>There are other Steambuild wrappers you can download, such as DXMT and Metal versions. Though, 
+        other two versions are only supported on M1+ devices, <span class="h2o">i would recommend using <span class="g"> DXVK</span> </span>. 
+      </p>
+      <a href="Images/Porting_Kit/PortingKit6.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit6.gif" alt="Installing the Steambuild 32/64bit DXVK port in Porting Kit"></a>
+
+
+      <p><span class="b">Porting Kit</span> will show a Window, press <span class="y">Next</span> on <span class="y">'Port Installation'</span>, then press next on
+        <span class="y">'Port Installation Agreement'</span>. On <span class="y">'Select the Port Destination'</span> (you can change the
+        location of the installation of the bottle, I would recommend just leaving it as it is though).
+        Press <span class="y">Install</span> and WAIT for it to install...
+      </p>
+
+      <a href="Images/Porting_Kit/PortingKit7.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit7.gif" alt="Port Installation Agreement and destination bottle install progress"></a>
+
+      <p>Wow</p>
+      <p>It's now installed!</p>
+
+       <a href="Images/Porting_Kit/PortingKit8.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit8.png" alt="Installation of the Bottle was successful."></a>
+
+       <p>Now, press the <span class="y">'PLAY'</span> button to go through. </p>
+
+       <a href="Images/Porting_Kit/PortingKit9.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit9.png" alt="Arrows pointing to Play under Thumbnail"></a>
+
+       <p>Doing this will bring a <span class="y">"Updating Steam"</span> Window, let it scroll a bit, might take some time
+        depending on your Internet Speed. After it's finished, It will close itself. After 30 seconds,
+        if it doesn't relaunch Steam, simply press <span class="y">'PLAY'</span>.
+       </p>
+
+       <p>Sign into your Steam Account with Deltarune on it.</p>
+
+       <p>After signing onto it, Download DELTARUNE. Either press the <span class="b">Cog/Manage button</span>
+        on the right or right Click on DELTARUNE,
+        hover over <span class="y">'Manage'</span> then press <span class="y">'Browse Local Files'</span>.
+       </p>
+
+      <a href="Images/Porting_Kit/PortingKit10.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit10.gif" alt=""></a>
+
+
+       <p>You'll then have a very OLD looking interface, in there, you should already see
+        all the files you need to copy. These should be the files:</p>
+
+        <ul>
+          <li><span class="b">chapter1_windows</span></li>
+          <li><span class="b">chapter2_windows</span></li>
+          <li><span class="b">chapter3_windows</span></li>
+          <li><span class="b">chapter4_windows</span></li>
+          <li><span class="b">chapter5_windows</span></li>
+          <li><span class="b">mus</span></li>
+          <li><span class="b">data.win</span></li>
+          <li><span class="b">DELTARUNE.exe</span></li>
+          <li><span class="b">options.ini</span></li>
+        </ul>
+
+        <p>Drag your mouse across all of the files and right click and press <span class="y">Copy</span>.
+          On your left, press <span class="y">Desktop</span>. Now this Desktop is also your actual MacOS
+          Desktop, so make sure to go into your Desktop and create a folder.
+          To make it better to know which is which, I will be naming my folder
+          <span class="b">Win_Deltarune</span>. Going back to the file explorer window, reload the page by
+          pressing the Location bar and pressing enter, and go into your <span class="b">Win_Deltarune</span>
+          folder. Now right click and press <span class="y">paste</span> to put all the DELTARUNE windows files in
+          there. Even if it doesn't show it pasted there, it should be. Check your
+          actual folder in Finder and you should see the files in your Win_Deltarune folder.
+        </p>
+
+      <a href="Images/Porting_Kit/PortingKit11.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit11.gif" alt=""></a>
+
+
+        <p>You can now completely exit out of the file explorer window and Steam. THOUGHH
+          Steam might re-open automatically. If this happens, simply on <span class="b">Porting Kit</span> and on
+          the page for Steambuild, press <span class="y">'More'</span> and <span class="r">Force Close</span>. If it opens again just do it
+          1 more time and it should close forever... hopefully.
+        </p>
+
+      <a href="Images/Porting_Kit/PortingKit12.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit12.gif" alt=""></a>
+
+
+
+
+
+    </section>
+
+
+    <section class="box" id="modding1">
+      <h2>Step 02: Some Organisation</h2>
+
+      <p>So, now we want to organise a bit i guess??? To easily access everything we need to.
+      </p>
+      <p> In your <span class="y">Desktop</span>, we will also need your MacOS version of
+        DELTARUNE. Launch your native/MacOS version of <span class="b">Steam</span>. Similarly to last time,
+        right click on DELTARUNE, hover over <span class="y">Manage</span> and press <span class="y">Browse Local Files</span>.
+        Copy the DELTARUNE app into <span class="y">Desktop</span> or simply move it into there, either one works.
+      </p>
+
+    <a href="Images/Porting_Kit/PortingKit13.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit13.gif" alt=""></a>
+  
+    </section>
+
+
+    <section class="box" id="modding2">
+      <h2>Step 03: Modding DELTARUNE</h2>
+
+      <p>Now for the Modding part!!!</p>
+
+      <p>Now get your Mod of choice, for me, I'll be using the "<a class="b" href="https://gamebanana.com/mods/688311" target="_blank" rel="noopener">60 FPS Overhaul</a>" Mod.
+        Now, the mod I have has a few files, for example my mod folder has these files:
+      </p>
+
+      <ul>
+        <li><span class="b">ch1_60fps.xdelta</span></li>
+        <li><span class="b">ch2_60fps.xdelta</span></li>
+        <li><span class="b">ch3_60fps.xdelta</span></li>
+        <li><span class="b">ch4_60fps.xdelta</span></li>
+        <li><span class="b">icon.png</span></li>
+        <li><span class="b">launcher_60fps.xdelta</span></li>
+        <li><span class="b">meta.json</span></li>
+        <li><span class="b">modding.xml</span></li>
+        <li><span class="b">README.txt</span></li>
+      </ul>
+
+      <!-- Note to self: explain what the meta.json and modding.xml files do here... -->
+
+      <a href="Images/Porting_Kit/PortingKit14.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit14.png" alt=""></a>
+
+      <p>The only files that you will most likely need for your mod are the <span class="b">.xdelta</span> files.
+        For this tutorial, I'll only be patching Chapter 1 of DELTARUNE to have the 60fps Mod.
+
+      </p>
+
+      <p>Make sure you've downloaded <span class="b">DeltaPatcher</span>! As we're going to use it right now.
+        But... just in case you can't use it or for some strange reason don't want to,
+        HERE's an online version of it:
+
+      </p>
+      <p><a class="b" href="https://kotcrab.github.io/xdelta-wasm/" target="_blank" rel="noopener">https://kotcrab.github.io/xdelta-wasm/</a></p>
+
+      <p>Open <span class="b">DeltaPatcher</span>. You will see 2 slots to input. <span class="y">'Original File'</span> and
+        <span class="y">'Xdelta patch'</span>.
+      </p>
+
+      <p><span class="y">'Original File'</span> will be your <span class="b">data.win</span> file from your Windows version of DELTARUNE</p>
+
+      <p>While <span class="y">'Xdelta patch'</span> will be your <span class="b">.xdelta</span> file.</p>
+
+      <p>The <span class="b">data.win</span> file for your mod will depend on what chapters your mod supports.
+        For mine, I will be using the <span class="b">data.win</span> file within <span class="b">chapter1_windows</span>. You might be
+        using a different one for your mod. But, just know that:
+      </p>
+
+      <ul>
+        <li><span class="b">data.win</span> (in main folder) -> Deltarune launcher/menu</li>
+        <li><span class="b">chapter1_windows</span> <span class="b">data.win</span> -> Chapter 1</li>
+        <li><span class="b">chapter2_windows</span> <span class="b">data.win</span> -> Chapter 2</li>
+        <li><span class="b">chapter3_windows</span> <span class="b">data.win</span> -> Chapter 3</li>
+        <li><span class="b">chapter4_windows</span> <span class="b">data.win</span> -> Chapter 4</li>
+        <li><span class="b">chapter5_windows</span> <span class="b">data.win</span> -> Chapter 5</li>
+      </ul>
+
+      <p><span class="r">Warning!!</span> Make sure to make a copy of the <span class="b">data.win</span> file you're planning to
+        patch with your mod, so you don't have to go back to doing all those steps to
+        getting that <span class="b">data.win</span> file back again!!!
+      </p>
+
+      <a href="Images/Porting_Kit/PortingKit15.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit15.gif" alt=""></a>
+
+      <p>After putting my <span class="b">data.win</span> file from <span class="b">chapter1_windows</span> into <span class="y">'Original file'</span> and
+        <span class="b">ch1_60fps.xdelta</span> into <span class="y">'Xdelta patch'</span>, I just need to press <span class="y">'Apply Patch'</span> and boom!!!
+        Patched!! And now that <span class="b">data.win</span> file should contain your lil mod!
+      </p>
+
+      <a href="Images/Porting_Kit/PortingKit16.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit16.gif" alt=""></a>
+
+      <p>Now, go back to your <span class="y">Desktop</span> and right click on the DELTARUNE app (MacOS version)
+        and press <span class="y">'Show Package Contents'</span>, press <span class="y">Contents</span>, press <span class="y">Resources</span>. This is your
+        MacOS DELTARUNE games folder. Now, since I'm only adding a mod for chapter 1, I will
+        go onto <span class="b">chapter1_mac</span>. Find the <span class="b">game.ios</span> file and rename it to anything else that isn't <span class="b">game.ios</span>.
+
+      </p>
+
+      <p>Bring your patched <span class="b">data.win</span> file into the chapter you've patched your <span class="b">data.win</span> for and rename
+        <span class="b">data.win</span> to <span class="b">game.ios</span>. And..... <span class="g">YOU'RE COMPLETE!!!!</span> well, if you've got multiple <span class="b">data.win</span> files
+        then of course just do that for all of them, rename all of them into <span class="b">game.ios</span> and put them in their
+        respective chapter.
+      </p>
+
+      <a href="Images/Porting_Kit/PortingKit17.gif" target="_blank" rel="noopener"><img class="guide-img" src="Images/Porting_Kit/PortingKit17.gif" alt=""></a>
+
+      <p>That is honestly all! Now enjoy your mod. Obviously this whole thingy is based off a video
+        that i've already created, so go and give me a <a class="b" href="https://www.youtube.com/@MultiUT" target="_blank" rel="noopener">sub</a>, if you need any assistance just
+        comment on there, thats the quickest way to get me to respond XD
+
+      </p>
+
+      <p class="r">THOUGH, you might have some trouble or issues, just go on here and
+        try to see if your issue is in here! </p>
+        <p><a class="b" href="#troubleshooting">Button to go to Troubleshooting area</a></p>
+
+
+
+
+    </section>
+
+
+
+    <section class="box" id="troubleshooting">
+      <h2>04. Troubleshooting</h2>
+      <p class="subtext">Fixing common issues and crash errors.</p>
+
+      <ul class="jump-list" style="margin-bottom: 20px;">
+        <li><a href="#patch-not-applied" class="jump-link">The Patch Could Not Be Applied</a></li>
+        <li><a href="#dialogue-json-files" class="jump-link">My Mod doesn't work...</a></li>
+      </ul>
+
+      <h3 id="patch-not-applied">The Patch Could Not Be Applied</h3>
+      If this shows up, it most likely means you're either patching the <span class="r">INCORRECT</span> <span class="b">data.win</span>
+      file, the <span class="b">data.win</span> file is possibly patched already or you're using the wrong
+      DELTARUNE version.
+      <a href="Images/Troubleshoot/Trouble_1.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Troubleshoot/Trouble_1.png" alt="DeltaPatcher download step 1"></a>
+
+      <p>Some other reasons this can happen, just in case the above doesn't fix it:</p>
+      <ul>
+        <li>Your DELTARUNE probably got updated since the mod was made. xdelta patches only work on ONE exact version of <span class="b">data.win</span>, so if <span class="b">Steam</span> or <span class="b">Porting Kit</span> auto updated the game after the mod came out, it will fail. Check the mod page for what version it actually needs.</li>
+        <li>Sometimes it shows up as a totally different looking error too, something like <span class="y">"target window checksum mismatch"</span> or <span class="y">XD3_INVALID_INPUT</span>. If so, it's likely the same reason.</li>
+        <li>If that <span class="b">data.win</span> already has a different mod patched onto it, you'll need to redownload DELTARUNE to get an unpatched copy.</li>
+      </ul>
+
+
+
+      <h3 id="dialogue-json-files">My Mod doesn't work...</h3>
+      <p>If for some strange reason your mod doesn't work after following all these steps,
+        you can try the last option of just using <span class="b">Porting Kit</span>.
+
+        No need for any <span class="b">game.ios</span> files or anything. Go into <span class="y">Finder</span>, and press
+        <span class="y">CMD + SHIFT + G</span>.
+      </p>
+      <p>Paste <span class="y">'~/Applications/Steambuild 32 64bit DXVK.app'</span> or go into that directory
+        from your user.
+      </p>
+      <p>Right click <span class="b">Steambuild</span> and go into <span class="y">'Show Package Contents'</span>, then <span class="y">Contents</span>,
+        <span class="y">drive_c</span>, <span class="y">Program Files(x86)</span>, <span class="y">Steam</span>, <span class="y">steamapps</span>, <span class="y">common</span> then last, <span class="b">DELTARUNE</span>.
+      </p>
+
+      <p>Now you can freely patch the <span class="b">data.win</span> files right there, and after patching them
+        try running <span class="b">DELTARUNE</span> through <span class="b">Porting Kit</span>!
+      </p>
+
+
+
+
+    </section>
+  </main>
+
+  <section class="box">
+      <h2>Extra Information!</h2>
+
+      <div class="subtopic" id="howto-deltapatcher"> 
+      <h3>DeltaPatcher Download!</h3>
+      <a href="Images/Deltapatcher/Deltapatcher_1.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Deltapatcher/Deltapatcher_1.png" alt="DeltaPatcher download step 1"></a>
+      <a href="Images/Deltapatcher/deltapatcher_2.png" target="_blank" rel="noopener"><img class="guide-img" src="Images/Deltapatcher/deltapatcher_2.png" alt="DeltaPatcher download step 2"></a>
+
+    </div>
+    
+  
+    
+  </section>
+
+
+
+  <footer>
+    <p class="disclaimer">
+      This website is not related or affiliated with Toby Fox or the DELTARUNE team.
+    </p>
+  </footer>
+</body>
+</html>

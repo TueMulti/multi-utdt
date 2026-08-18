@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multis DT Page!</title>
+  <meta name="description" content="DELTARUNE and UNDERTALE Tutorials!">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1> <span class="y">Multi's</span> <span class="bg">Deltarune</span> page</h1>
+  </header>
+
+  <main>
+    <div class="intro-text">
+      <p>My Deltarune Tutorial website thingy . Feel free on telling me to add anything or addressing
+        certain issues. You can PM me on <button type="button" class="discord-copy-btn y" id="discordBtn"
+          data-clipboard="999multi" title="Click to copy Discord username">DISCORD</button><span class="copy-toast"
+          id="copyToast">[ Copied! ]</span></p>
+          <p>You can also follow my socials, <a class="r" href="" target="_blank" rel="noopener">which is just YouTube....</a></p>
+    </div>
+
+    <section class="box">
+      <h2 style="margin-bottom: 20px;">!!! TUTORIALS !!!</h2>
+
+      <ul class="menu-list">
+        <li>
+          <a href="macos.html" class="menu-link">
+            <span class="y">MacOS Deltarune Modding</span>
+          </a>
+        </li>
+        <li>
+          <a href="more.html" class="menu-link">
+            <span class="subtext">More...</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p class="disclaimer">
+      This website is not related or affiliated with Toby Fox or the DELTARUNE team.
+    </p>
+  </footer>
+
+  <script>
+    const discordBtn = document.getElementById('discordBtn');
+    const copyToast = document.getElementById('copyToast');
+
+    if (discordBtn) {
+      discordBtn.addEventListener('click', async () => {
+        const username = discordBtn.getAttribute('data-clipboard') || 'multi';
+        try {
+          await navigator.clipboard.writeText(username);
+          copyToast.textContent = `[ Copied: ${username} ]`;
+          copyToast.classList.add('show');
+          setTimeout(() => {
+            copyToast.classList.remove('show');
+          }, 2500);
+        } catch (err) {
+          console.error('Failed to copy: ', err);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
